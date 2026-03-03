@@ -85,5 +85,9 @@ void TestSettings::roundtrip_allFields()
     QCOMPARE(loaded.paletteCount,       original.paletteCount);
 }
 
-QTEST_MAIN(TestSettings)
+int run_settings_tests(int argc, char **argv)
+{
+    TestSettings t;
+    return QTest::qExec(&t, argc, argv);
+}
 #include "settings_test.moc"

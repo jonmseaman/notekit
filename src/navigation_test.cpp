@@ -109,5 +109,9 @@ void TestNavigation::deleteItem_removesFileAndModelRow()
     QCOMPARE(m_model->rowCount(), rowsBefore - 1);
 }
 
-QTEST_MAIN(TestNavigation)
+int run_navigation_tests(int argc, char **argv)
+{
+    TestNavigation t;
+    return QTest::qExec(&t, argc, argv);
+}
 #include "navigation_test.moc"

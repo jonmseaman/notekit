@@ -120,5 +120,9 @@ void TestNotebook::roundtrip_preservesDrawingBlock()
     QCOMPARE(data.drawingPositions[0].second.base64Data, drawingData);
 }
 
-QTEST_MAIN(TestNotebook)
+int run_notebook_tests(int argc, char **argv)
+{
+    TestNotebook t;
+    return QTest::qExec(&t, argc, argv);
+}
 #include "notebook_test.moc"

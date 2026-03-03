@@ -46,9 +46,8 @@ set(SOURCES
 
 qt_add_executable(notekit ${SOURCES})
 
-# Explicitly run MOC on .hpp headers with Q_OBJECT that AUTOMOC won't find
-qt_wrap_cpp(EXTRA_MOC_SRCS src/notebook_widgets.hpp TARGET notekit)
-target_sources(notekit PRIVATE ${EXTRA_MOC_SRCS})
+# notebook_widgets.hpp has Q_OBJECT — add as source so AUTOMOC picks it up
+target_sources(notekit PRIVATE src/notebook_widgets.hpp)
 
 # Qt resource system — all assets via :/notekit/... — NO runtime filesystem paths
 target_sources(notekit PRIVATE data/resources.qrc)
@@ -91,4 +90,35 @@ endif()
 install(TARGETS notekit DESTINATION bin)
 
 enable_testing()
-add_subdirectory(tests)
+
+# ── Tests ────────────────────────────────────────────────────────────────────
+find_package(Qt6 REQUIRED COMPONENTS Test)
+
+set(TEST_INCLUDES
+    ${CMAKE_CURRENT_SOURCE_DIR}/src
+    ${CMAKE_BINARY_DIR}
+    ${JSONCPP_INCLUDE_DIRS}
+    ${ZLIB_INCLUDE_DIRS}
+)
+
+qt_add_executable(notekit_tests
+    src/tests_main.cpp
+    src/notebook_test.cpp
+    src/navigation_test.cpp
+    src/settings_test.cpp
+    src/findinfiles_test.cpp
+    src/notebook.cpp
+    src/drawing.cpp
+    src/imagewidgets.cpp
+    src/navigation.cpp
+    src/settings.cpp
+    src/findinfiles.cpp
+    src/notebook_widgets.hpp  # AUTOMOC processes Q_OBJECT headers listed as sources
+)
+target_sources(notekit_tests PRIVATE data/resources.qrc)
+target_include_directories(notekit_tests PRIVATE ${TEST_INCLUDES})
+target_link_directories(notekit_tests PRIVATE ${JSONCPP_LIBRARY_DIRS})
+target_link_libraries(notekit_tests PRIVATE
+    Qt6::Test Qt6::Widgets Qt6::Gui Qt6::Core Qt6::Concurrent
+    ${JSONCPP_LIBRARIES} ZLIB::ZLIB)
+add_test(NAME notekit_tests COMMAND notekit_tests -platform offscreen)

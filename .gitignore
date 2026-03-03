@@ -33,3 +33,5 @@ __/
 Makefile
 *.user
 .DS_Store
+/notekit_tests_autogen
+notekit_tests

@@ -96,5 +96,9 @@ void TestFindInFiles::search_multipleMatches()
     QCOMPARE(resultSpy.count(), 2);
 }
 
-QTEST_MAIN(TestFindInFiles)
+int run_findinfiles_tests(int argc, char **argv)
+{
+    TestFindInFiles t;
+    return QTest::qExec(&t, argc, argv);
+}
 #include "findinfiles_test.moc"
