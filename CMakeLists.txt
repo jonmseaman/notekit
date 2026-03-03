@@ -22,10 +22,6 @@ if(UNIX AND NOT APPLE)
     pkg_check_modules(FONTCONFIG REQUIRED fontconfig)
 endif()
 
-# Optional: cLaTeXMath
-option(HAVE_CLATEXMATH "Use cLaTeXMath to render LaTeX math" OFF)
-set(CLATEXMATH_PATH "${CMAKE_CURRENT_LIST_DIR}/cLaTeXMath/" CACHE STRING "Base path for cLaTeXMath")
-
 configure_file(
     "${CMAKE_CURRENT_LIST_DIR}/config.h.in"
     "${CMAKE_CURRENT_BINARY_DIR}/config.h"
@@ -75,16 +71,6 @@ target_link_libraries(notekit PRIVATE
 if(UNIX AND NOT APPLE)
     target_include_directories(notekit PRIVATE ${FONTCONFIG_INCLUDE_DIRS})
     target_link_libraries(notekit PRIVATE ${FONTCONFIG_LIBRARIES})
-endif()
-
-if(HAVE_CLATEXMATH)
-    target_include_directories(notekit PRIVATE "${CLATEXMATH_PATH}/src/")
-    target_link_libraries(notekit PRIVATE "-L${CLATEXMATH_PATH}/" "-l:libLaTeX.a")
-    pkg_check_modules(tinyxml2 tinyxml2)
-    if(tinyxml2_FOUND)
-        target_link_libraries(notekit PRIVATE ${tinyxml2_LIBRARIES})
-    endif()
-    target_compile_definitions(notekit PRIVATE HAVE_CLATEXMATH __OS_Linux__)
 endif()
 
 install(TARGETS notekit DESTINATION bin)

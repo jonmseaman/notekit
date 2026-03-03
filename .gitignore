@@ -35,3 +35,4 @@ Makefile
 .DS_Store
 /notekit_tests_autogen
 notekit_tests
+/Testing
