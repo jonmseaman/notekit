@@ -90,7 +90,7 @@ dependencies entirely.
   components where QML is clearly advantageous)
 - **Language**: C++17 minimum; C++23 permitted where supported by all target compilers
   (MSVC, GCC, Clang)
-- **Build System**: CMake ≥ 3.21 (required for first-class Qt 6 CMake integration)
+- **Build System**: CMake ≥ 4.2 (required for first-class Qt 6 CMake integration)
 - **IDE / Project File**: Qt Creator (CMakeLists.txt-based project)
 - **Syntax Highlighting**: QSyntaxHighlighter (replacing GtkSourceView/GtkSourceViewmm)
 - **Note Storage**: JSON config via jsoncpp (retained); Markdown files as plain UTF-8

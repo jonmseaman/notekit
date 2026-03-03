@@ -10,7 +10,26 @@ data/fonts/.uuid
 
 # compile gsettings schemas
 gnome/gschemas.compiled
+data/gschemas.compiled
 
 cmake-build-debug
 cmake-build-Release
 .idea
+
+# cmake build artifacts
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+compile_commands.json
+.cache/
+Makefile
+notekit_autogen/
+notekit
+*.tmp
+build/
+# cmake parent-dir reference created when subdirs reference ../files
+__/
+Makefile
+*.user
+.DS_Store

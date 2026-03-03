@@ -1,3 +1,6 @@
+# DEPRECATED: This build file is superseded by CMakeLists.txt (Qt 6.10).
+# Do not use for new builds. Will be removed when GTK3 migration is complete.
+
 project('notekit', 'cpp',
 	version : '0.3.0',
 	default_options : ['warning_level=3', 'cpp_std=c++14']

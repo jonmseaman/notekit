@@ -1,8 +1,4 @@
-// global config
+// global config — Qt 6.10 migration
 
 #define NK_VERSION "0.3.0"
-#cmakedefine HAVE_LASEM
 #cmakedefine HAVE_CLATEXMATH
-#cmakedefine MIGRATE_LEGACY_SETTINGS
-#cmakedefine DEFAULT_SETTINGS_PROVIDER "@DEFAULT_SETTINGS_PROVIDER@"
-

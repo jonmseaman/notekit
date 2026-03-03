@@ -1,0 +1,61 @@
+/* NoteKit Qt stylesheet — translated from stylesheet.css (GTK3) */
+
+/* Sidebar tree view */
+QTreeView {
+    border: 1px solid rgba(186, 195, 207, 0.6);
+    outline: none;
+}
+
+QTreeView.classic {
+    color: #BAC3CF;
+    background-color: rgba(53, 57, 69, 240);
+}
+
+QTreeView.classic::item {
+    color: #BAC3CF;
+}
+
+QTreeView.classic::item:selected {
+    background-color: #5294e2;
+    color: #ffffff;
+}
+
+QTreeView.classic::item:hover:!selected {
+    background-color: rgba(186, 195, 207, 38);
+}
+
+QTreeView.classic::branch {
+    color: rgba(123, 129, 141, 248);
+}
+
+QTreeView.classic::branch:hover {
+    color: #BAC3CF;
+}
+
+/* Main editor view */
+QTextEdit#mainView {
+    font-size: 16px;
+    font-family: Charter, "Bitstream Charter", "Noto Serif", serif;
+    padding: 16px;
+}
+
+/* Scroll area for main view */
+QScrollArea#mainViewScroll {
+    background: transparent;
+}
+
+/* Toolbar */
+QToolBar {
+    border: none;
+    spacing: 2px;
+}
+
+/* Status bar */
+QStatusBar {
+    font-size: 12px;
+}
+
+/* Dock widget */
+QDockWidget {
+    font-size: 13px;
+}

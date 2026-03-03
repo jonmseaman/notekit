@@ -1,0 +1,24 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+  <qresource prefix="/notekit">
+    <file>stylesheet.qss</file>
+    <file>default_config.json</file>
+    <file>fonts/Charter Regular.otf</file>
+    <file>fonts/Charter Bold.otf</file>
+    <file>fonts/Charter Italic.otf</file>
+    <file>fonts/Charter Bold Italic.otf</file>
+    <file>icons/hicolor/index.theme</file>
+    <file>icons/hicolor/scalable/emblems/eraser-tool-symbolic.svg</file>
+    <file>icons/hicolor/scalable/emblems/large-pen-symbolic.svg</file>
+    <file>icons/hicolor/scalable/emblems/maximize-symbolic.svg</file>
+    <file>icons/hicolor/scalable/emblems/maximize.svg</file>
+    <file>icons/hicolor/scalable/emblems/medium-pen-symbolic.svg</file>
+    <file>icons/hicolor/scalable/emblems/minimize-symbolic.svg</file>
+    <file>icons/hicolor/scalable/emblems/minimize.svg</file>
+    <file>icons/hicolor/scalable/emblems/pen-tool-symbolic.svg</file>
+    <file>icons/hicolor/scalable/emblems/pick-color-symbolic.svg</file>
+    <file>icons/hicolor/scalable/emblems/select-symbolic.svg</file>
+    <file>icons/hicolor/scalable/emblems/small-pen-symbolic.svg</file>
+    <file>icons/hicolor/scalable/emblems/text-symbolic.svg</file>
+  </qresource>
+</RCC>

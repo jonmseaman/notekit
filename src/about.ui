@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CAboutDialog</class>
+ <widget class="QDialog" name="CAboutDialog">
+  <property name="windowTitle">
+   <string>About NoteKit</string>
+  </property>
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>380</width><height>280</height></rect>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <layout class="QVBoxLayout">
+   <item>
+    <widget class="QLabel" name="titleLabel">
+     <property name="text"><string>&lt;h2&gt;NoteKit&lt;/h2&gt;</string></property>
+     <property name="alignment"><set>Qt::AlignCenter</set></property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="versionLabel">
+     <property name="text"><string>Version: </string></property>
+     <property name="alignment"><set>Qt::AlignCenter</set></property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="descLabel">
+     <property name="text"><string>A hierarchical markdown notetaking
+application with tablet support.</string></property>
+     <property name="alignment"><set>Qt::AlignCenter</set></property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="authorsLabel">
+     <property name="text"><string>Authors: Matvey Soloviev, Florian &quot;sp1rit&quot;, Lyes Saadi</string></property>
+     <property name="alignment"><set>Qt::AlignCenter</set></property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="artistsLabel">
+     <property name="text"><string>Artists: Thomas Kole</string></property>
+     <property name="alignment"><set>Qt::AlignCenter</set></property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="urlLabel">
+     <property name="text"><string>&lt;a href=&quot;https://github.com/blackhole89/notekit&quot;&gt;GitHub: @blackhole89/notekit&lt;/a&gt;</string></property>
+     <property name="alignment"><set>Qt::AlignCenter</set></property>
+     <property name="openExternalLinks"><bool>true</bool></property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="licenseLabel">
+     <property name="text"><string>License: GPL v3</string></property>
+     <property name="alignment"><set>Qt::AlignCenter</set></property>
+    </widget>
+   </item>
+   <item alignment="Qt::AlignCenter">
+    <widget class="QPushButton" name="closeButton">
+     <property name="text"><string>Close</string></property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+</ui>

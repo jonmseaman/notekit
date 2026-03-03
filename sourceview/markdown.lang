@@ -184,9 +184,9 @@
         <context ref="backslash-escape"/>
         <context ref="line-break"/>
         <context ref="escape"/>
-
+<!--
         <context ref="latex"/>
-
+-->
       </include>
     </context>
 
@@ -223,9 +223,9 @@
         <context ref="backslash-escape"/>
         <context ref="line-break"/>
         <context ref="escape"/>
-
+<!--
         <context ref="latex"/>
-
+-->
       </include>
     </context>
 
@@ -262,9 +262,9 @@
         <context ref="backslash-escape"/>
         <context ref="line-break"/>
         <context ref="escape"/>
-
+<!--
         <context ref="latex"/>
-
+-->
       </include>
     </context>
 
@@ -350,9 +350,9 @@
         <context ref="backslash-escape"/>
         <context ref="line-break"/>
         <context ref="escape"/>
-
+<!--
         <context ref="latex"/>
-
+-->
       </include>
     </context>
 
@@ -588,9 +588,9 @@
         <context ref="backslash-escape"/>
         <context ref="line-break"/>
         <context ref="escape"/>
-
+<!--
         <context ref="latex"/>
-
+-->
       </include>
     </context>
 
